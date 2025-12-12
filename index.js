@@ -1,5 +1,5 @@
-// 6. Code Readability & `'use strict'`
 "use strict";
+// 6. Code Readability & `'use strict'`
 
 // Input & Output setup (Node readline)
 const readline = require("node:readline");
@@ -20,7 +20,7 @@ async function getValidNumberInput(promptMessage) {
 }
 
 async function getValidOperatorInput(promptMessage) {
-  const valid = new Set(["+", "-", "", "/", "%", "*", "**"]);
+  const valid = new Set(["+", "-", "/", "%", "*", "**"]);
   while (true) {
     const op = (await ask(promptMessage)).trim();
     if (valid.has(op)) return op;
@@ -39,10 +39,10 @@ function multiply(a, b) {
   return a * b;
 }
 function divide(a, b) {
-  return b === 0 ? "Error: Division by zero!!" : a / b;
+  return b === 0 ? "Error: Division by zero!" : a / b;
 }
 function modulo(a, b) {
-  return b === 0 ? "Error: Division by zero!!" : a % b;
+  return b === 0 ? "Error: Division by zero!" : a % b;
 }
 function power(a, b) {
   return a ** b;
@@ -86,7 +86,7 @@ async function main() {
     // berjalan terus sampai user keluar
     const a = await getValidNumberInput("Masukkan angka pertama: ");
     const op = await getValidOperatorInput(
-      "Pilih operator (+, -, , /, %, *, **): "
+      "Pilih operator (+, -, /, %, *, **): "
     );
     const b = await getValidNumberInput("Masukkan angka kedua: ");
 
