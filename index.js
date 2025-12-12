@@ -1,5 +1,5 @@
 "use strict";
-// 6. Code Readability & `'use strict'`
+// 6. Code Readability & 'use strict'
 
 // Input & Output setup (Node readline)
 const readline = require("node:readline");
